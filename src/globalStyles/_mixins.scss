@@ -1,0 +1,19 @@
+/*-----TAMAÑOS ICONOS----*/
+
+$w-small: 2rem;
+$w-medium: 2.5rem;
+$w-large: 3rem;
+
+$h-small: 2rem;
+$h-medium: 2.5rem;
+$h-large: 3rem;
+
+@mixin icon($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// Ejemplo de uso:
+// .icon {
+//   @include icon($w-medium, $h-medium);
+// }

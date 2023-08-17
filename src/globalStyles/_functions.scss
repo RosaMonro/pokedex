@@ -1,0 +1,46 @@
+/*-----mapa y loop de tamaños tipografía---*/
+
+$sizes: (
+  "size-14": $font-size-14,
+  "size-16": $font-size-16,
+  "size-18": $font-size-18,
+  "size-20": $font-size-20,
+  "size-24": $font-size-24,
+);
+
+@each $size, $i in $sizes {
+  .font-#{$size} {
+    font-size: $i;
+  }
+}
+
+/*-----mapa y loop de colores---*/
+$colors: (
+  "red-dark": $color-red-dark,
+  "red": $color-red,
+  "red-light": $color-red-light,
+
+  "black-dark": $color-black-dark,
+  "black": $color-black,
+  "black-light": $color-black-light,
+  "grey": $color-grey,
+
+  "deepblie": $color-deepblue,
+  "skyblue": $color-skyblue,
+  "skyblue-light": $color-skyblue-light,
+
+  "fuchsia": $color-fuchsia,
+  "fuchsia-light": $color-fuchsia-light,
+  "green": $color-green,
+  "green-light": $color-green-light,
+  "yellow": $color-yellow,
+  "yellow-light": $color-yellow-light,
+
+  "white": $color-white,
+);
+
+@each $color, $i in $colors {
+  .color-#{$color} {
+    color: $i;
+  }
+}
