@@ -1,0 +1,92 @@
+@import "../../scss/_variables";
+
+.topbar {
+  display: flex;
+  gap: $unit-10;
+
+  background-color: $color-red;
+  padding: $unit-12;
+  border-bottom: 1rem solid $color-red-dark;
+}
+
+.camera {
+  background-color: $color-pure-white;
+  border-radius: 100%;
+  height: 7rem;
+  width: 7rem;
+  padding: 0.7rem;
+
+  &-glass {
+    background-color: $color-skyblue;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &-reflex {
+      background-color: $color-skyblue-light;
+      border-radius: 100%;
+      height: 2rem;
+      width: 1.2rem;
+      transform: rotate(45deg);
+      position: absolute;
+      left: 1.2rem;
+      top: 0.8rem;
+    }
+  }
+}
+
+.lights {
+  display: flex;
+  gap: $unit-10;
+  padding: $unit-10;
+}
+
+.light {
+  height: 2.3rem;
+  width: 2.3rem;
+  border-radius: 100%;
+  position: relative;
+
+  &--fuchsia {
+    background-color: $color-fuchsia;
+
+    &-reflex {
+      background-color: $color-fuchsia-light;
+      height: 0.8rem;
+      width: 0.5rem;
+      transform: rotate(45deg);
+      position: absolute;
+      left: 0.5rem;
+      top: 0.4rem;
+    }
+  }
+
+  &--yellow {
+    background-color: $color-yellow;
+
+    &-reflex {
+      background-color: $color-yellow-light;
+      height: 0.8rem;
+      width: 0.5rem;
+      transform: rotate(45deg);
+      position: absolute;
+      left: 0.5rem;
+      top: 0.4rem;
+    }
+  }
+
+  &--green {
+    background-color: $color-green;
+
+    &-reflex {
+      background-color: $color-green-light;
+      height: 0.8rem;
+      width: 0.5rem;
+      transform: rotate(45deg);
+      position: absolute;
+      left: 0.5rem;
+      top: 0.4rem;
+    }
+  }
+}

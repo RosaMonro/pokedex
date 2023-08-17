@@ -21,6 +21,7 @@ $colors: (
   "yellow-light": $color-yellow-light,
 
   "white": $color-white,
+  "pure-white": $color-pure-white,
 );
 
 @each $color, $i in $colors {
