@@ -24,7 +24,7 @@
     position: relative;
 
     &-reflex {
-      background-color: $color-skyblue-light;
+      background-color: $color-transparent;
       border-radius: 100%;
       height: 2rem;
       width: 1.2rem;
@@ -40,6 +40,18 @@
   display: flex;
   gap: $unit-10;
   padding: $unit-10;
+
+  .light:first-child {
+    background-color: $color-fuchsia;
+  }
+
+  .light:nth-child(2) {
+    background-color: $color-yellow;
+  }
+
+  .light:nth-child(3) {
+    background-color: $color-green;
+  }
 }
 
 .light {
@@ -48,45 +60,14 @@
   border-radius: 100%;
   position: relative;
 
-  &--fuchsia {
-    background-color: $color-fuchsia;
-
-    &-reflex {
-      background-color: $color-fuchsia-light;
-      height: 0.8rem;
-      width: 0.5rem;
-      transform: rotate(45deg);
-      position: absolute;
-      left: 0.5rem;
-      top: 0.4rem;
-    }
-  }
-
-  &--yellow {
-    background-color: $color-yellow;
-
-    &-reflex {
-      background-color: $color-yellow-light;
-      height: 0.8rem;
-      width: 0.5rem;
-      transform: rotate(45deg);
-      position: absolute;
-      left: 0.5rem;
-      top: 0.4rem;
-    }
-  }
-
-  &--green {
-    background-color: $color-green;
-
-    &-reflex {
-      background-color: $color-green-light;
-      height: 0.8rem;
-      width: 0.5rem;
-      transform: rotate(45deg);
-      position: absolute;
-      left: 0.5rem;
-      top: 0.4rem;
-    }
+  &-reflex {
+    background-color: $color-transparent;
+    height: 0.8rem;
+    width: 0.5rem;
+    border-radius: 100%;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 0.5rem;
+    top: 0.4rem;
   }
 }

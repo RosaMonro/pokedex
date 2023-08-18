@@ -11,17 +11,14 @@ $colors: (
 
   "deepblie": $color-deepblue,
   "skyblue": $color-skyblue,
-  "skyblue-light": $color-skyblue-light,
 
   "fuchsia": $color-fuchsia,
-  "fuchsia-light": $color-fuchsia-light,
   "green": $color-green,
-  "green-light": $color-green-light,
   "yellow": $color-yellow,
-  "yellow-light": $color-yellow-light,
 
   "white": $color-white,
   "pure-white": $color-pure-white,
+  "color-transparent": $color-transparent,
 );
 
 @each $color, $i in $colors {

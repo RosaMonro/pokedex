@@ -1,0 +1,139 @@
+@import "../../scss/_variables";
+
+.cross {
+  width: 90px;
+  height: 90px;
+
+  position: absolute;
+  /* 		top: 394px;
+  left: 230px; */
+}
+
+.topcross {
+  width: 30px;
+  height: 30px;
+  background-color: $color-black;
+
+  position: absolute;
+  top: 0;
+  left: 30px;
+
+  box-shadow: -3px 2px $color-black-dark;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.leftcross {
+  width: 30px;
+  height: 30px;
+  background-color: $color-black;
+  z-index: 1;
+
+  position: absolute;
+  left: 0;
+  top: 30px;
+
+  box-shadow: -3px 2px $color-black-dark;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.midcross {
+  width: 30px;
+  height: 30px;
+  background-color: $color-black;
+
+  position: absolute;
+  top: 30px;
+  left: 30px;
+
+  box-shadow: -3px 2px $color-black-dark;
+}
+
+.rightcross {
+  width: 30px;
+  height: 30px;
+  background-color: $color-black;
+
+  position: absolute;
+  top: 30px;
+  right: 0;
+
+  box-shadow: -3px 2px $color-black-dark;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.botcross {
+  width: 30px;
+  height: 30px;
+  background-color: $color-black;
+
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+
+  box-shadow: -3px 2px $color-black-dark;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.upT {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $color-black-dark;
+
+  position: absolute;
+  top: 5px;
+  left: 4px;
+}
+
+.downT {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $color-black-dark;
+
+  position: absolute;
+  bottom: 5px;
+  left: 4px;
+}
+
+.leftT {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid $color-black-dark;
+  border-bottom: 10px solid transparent;
+
+  position: absolute;
+  top: 5px;
+  left: 4px;
+}
+
+.rightT {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 10px solid $color-black-dark;
+  border-bottom: 10px solid transparent;
+
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.midCircle {
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 5px;
+  left: 4px;
+
+  border-radius: 30px;
+  background: radial-gradient($color-black-dark, $color-black);
+}

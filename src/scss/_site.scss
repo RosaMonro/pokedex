@@ -1,7 +1,14 @@
 html {
   font-size: 62.5%;
+  background-color: #f2ffef;
+  background-image: linear-gradient(90deg, #f2ffef 0%, #c1feb7 72%);
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
 }

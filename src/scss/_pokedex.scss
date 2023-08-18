@@ -1,0 +1,24 @@
+.pokedex {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  max-width: 92rem;
+  height: 100vh;
+  max-height: 77rem;
+
+  background-color: $color-red;
+
+  &-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-screen {
+    background-color: $color-white;
+    width: 300px;
+    height: 300px;
+    margin: $unit-48 $unit-24;
+    // padding: $unit-12;
+  }
+}
