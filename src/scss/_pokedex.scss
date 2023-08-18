@@ -37,3 +37,12 @@
     }
   }
 }
+
+@include mq($bp-small-desktop) {
+  //1024px
+  width: 18rem;
+  height: 5.5rem;
+  max-width: 27.5rem;
+
+  font-size: $font-size-xxs; //16px
+}
