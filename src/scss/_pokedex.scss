@@ -15,12 +15,13 @@
     justify-content: center;
     align-items: center;
 
+    height: 100%;
     padding: $unit-24;
-    padding-bottom: 0;
 
     @include mq($bp-medium) {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 6fr 4fr;
+      grid-gap: $unit-24;
     }
   }
 
@@ -33,6 +34,7 @@
 
     @include mq($bp-medium) {
       width: 100%;
+      height: 100%;
     }
   }
 
@@ -42,7 +44,6 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    margin: $unit-24;
 
     @include mq($bp-medium) {
       flex-direction: column;
@@ -63,10 +64,14 @@
 
   &--footer {
     display: flex;
-    gap: $unit-10;
+    justify-content: flex-end;
+
+    font-family: $font-machine;
+    font-size: $font-size-16;
 
     background-color: $color-red;
-    padding: $unit-12;
+    color: $color-red-dark;
+    padding: 0 $unit-12;
     border-top: 1rem solid $color-red-dark;
   }
 }

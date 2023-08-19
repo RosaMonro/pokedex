@@ -26,7 +26,9 @@ function App() {
             </div>
           </div>
         </div>
-        <footer className="pokedex--footer"></footer>
+        <div className="pokedex--footer">
+          <p>Pokedex 2023</p>
+        </div>
       </div>
     </>
   );

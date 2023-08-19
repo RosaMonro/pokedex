@@ -16,6 +16,8 @@
   width: 7rem;
   padding: 0.7rem;
 
+  // box-shadow: -0.2rem 0.1rem $color-transparent;
+
   &-glass {
     background-color: $color-skyblue;
     border-radius: 100%;
@@ -43,14 +45,17 @@
 
   .light:first-child {
     background-color: $color-fuchsia;
+    // box-shadow: -0.1rem 0.05rem $color-transparent;
   }
 
   .light:nth-child(2) {
     background-color: $color-yellow;
+    // box-shadow: -0.1rem 0.05rem $color-transparent;
   }
 
   .light:nth-child(3) {
     background-color: $color-green;
+    // box-shadow: -0.1rem 0.05rem $color-transparent;
   }
 }
 
