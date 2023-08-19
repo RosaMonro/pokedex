@@ -1,91 +1,92 @@
 @import "../../scss/_variables";
+@import "../../scss/_mixins";
 
 .cross {
-  width: 90px;
-  height: 90px;
+  width: 9rem;
+  height: 9rem;
 
   position: relative;
 }
 
 .topcross {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   background-color: $color-black;
 
   position: absolute;
   top: 0;
-  left: 30px;
+  left: 3rem;
 
-  box-shadow: -3px 2px $color-black-dark;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  box-shadow: -0.3rem 0.2rem $color-black-dark;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .leftcross {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   background-color: $color-black;
   z-index: 1;
 
   position: absolute;
   left: 0;
-  top: 30px;
+  top: 3rem;
 
-  box-shadow: -3px 2px $color-black-dark;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  box-shadow: -0.3rem 0.2rem $color-black-dark;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
 .midcross {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   background-color: $color-black;
 
   position: absolute;
-  top: 30px;
-  left: 30px;
+  top: 3rem;
+  left: 3rem;
 
-  box-shadow: -3px 2px $color-black-dark;
+  box-shadow: -0.3rem 0.2rem $color-black-dark;
 }
 
 .rightcross {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   background-color: $color-black;
 
   position: absolute;
-  top: 30px;
+  top: 3rem;
   right: 0;
 
-  box-shadow: -3px 2px $color-black-dark;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  box-shadow: -0.3rem 0.2rem $color-black-dark;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .botcross {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   background-color: $color-black;
 
   position: absolute;
   bottom: 0;
-  left: 30px;
+  left: 3rem;
 
-  box-shadow: -3px 2px $color-black-dark;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  box-shadow: -0.3rem 0.2rem $color-black-dark;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .upT {
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid $color-black-dark;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-bottom: 1rem solid $color-black-dark;
 
   position: absolute;
-  top: 5px;
-  left: 4px;
+  top: 0.5rem;
+  left: 0.4rem;
 
   cursor: pointer;
 }
@@ -93,13 +94,13 @@
 .downT {
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid $color-black-dark;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-top: 1rem solid $color-black-dark;
 
   position: absolute;
-  bottom: 5px;
-  left: 4px;
+  bottom: 0.5rem;
+  left: 0.4rem;
 
   cursor: pointer;
 }
@@ -107,13 +108,13 @@
 .leftT {
   width: 0;
   height: 0;
-  border-top: 10px solid transparent;
-  border-right: 10px solid $color-black-dark;
-  border-bottom: 10px solid transparent;
+  border-top: 1rem solid transparent;
+  border-right: 1rem solid $color-black-dark;
+  border-bottom: 1rem solid transparent;
 
   position: absolute;
-  top: 5px;
-  left: 4px;
+  top: 0.5rem;
+  left: 0.4rem;
 
   cursor: pointer;
 }
@@ -121,25 +122,25 @@
 .rightT {
   width: 0;
   height: 0;
-  border-top: 10px solid transparent;
-  border-left: 10px solid $color-black-dark;
-  border-bottom: 10px solid transparent;
+  border-top: 1rem solid transparent;
+  border-left: 1rem solid $color-black-dark;
+  border-bottom: 1rem solid transparent;
 
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0.5rem;
+  right: 0.5rem;
 
   cursor: pointer;
 }
 
 .midCircle {
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
 
   position: absolute;
-  top: 5px;
-  left: 4px;
+  top: 0.5rem;
+  left: 0.4rem;
 
-  border-radius: 30px;
+  border-radius: 3rem;
   background: radial-gradient($color-black-dark, $color-black);
 }

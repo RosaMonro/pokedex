@@ -5,23 +5,34 @@
   width: 100vw;
   max-width: 92rem;
   height: 100vh;
-  max-height: 77rem;
+  // max-height: 77rem;
 
   background-color: $color-red;
 
   &--main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: $unit-24;
+
+    @include mq($bp-medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &--screen {
     background-color: $color-white;
     height: 30rem;
+    width: 100%;
     max-width: 48rem;
-    width: 30rem;
+    margin: 0 auto;
 
-    margin: $unit-48 $unit-24;
-    // padding: $unit-12;
+    @include mq($bp-medium) {
+      width: 100%;
+    }
   }
 
   &--commands {
@@ -29,20 +40,23 @@
     flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
+    margin: $unit-24;
+
+    @include mq($bp-medium) {
+      flex-direction: column;
+    }
 
     &--btns {
       display: flex;
       flex-direction: column;
       gap: $unit-10;
+      width: 100%;
+      margin: $unit-24;
+    }
+
+    &--btncross {
+      margin: $unit-24;
     }
   }
-}
-
-@include mq($bp-small-desktop) {
-  //1024px
-  width: 18rem;
-  height: 5.5rem;
-  max-width: 27.5rem;
-
-  font-size: $font-size-xxs; //16px
 }
