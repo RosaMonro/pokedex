@@ -6,6 +6,10 @@
   height: 9rem;
 
   position: relative;
+
+  @include mq($bp-medium) {
+    transform: scale(1.2);
+  }
 }
 
 .topcross {
@@ -20,6 +24,9 @@
   box-shadow: -0.3rem 0.2rem $color-black-dark;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+  @include mq($bp-medium) {
+    transform: scale(1.2);
+  }
 }
 
 .leftcross {
@@ -35,6 +42,10 @@
   box-shadow: -0.3rem 0.2rem $color-black-dark;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
+
+  @include mq($bp-medium) {
+    transform: scale(1.2);
+  }
 }
 
 .midcross {
@@ -47,6 +58,12 @@
   left: 3rem;
 
   box-shadow: -0.3rem 0.2rem $color-black-dark;
+
+  @include mq($bp-medium) {
+    z-index: 1;
+    transform: scale(1.2);
+    box-shadow: none;
+  }
 }
 
 .rightcross {
@@ -61,6 +78,9 @@
   box-shadow: -0.3rem 0.2rem $color-black-dark;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+  @include mq($bp-medium) {
+    transform: scale(1.2);
+  }
 }
 
 .botcross {
@@ -75,6 +95,9 @@
   box-shadow: -0.3rem 0.2rem $color-black-dark;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+  @include mq($bp-medium) {
+    transform: scale(1.2);
+  }
 }
 
 .upT {
@@ -89,6 +112,9 @@
   left: 0.4rem;
 
   cursor: pointer;
+  @include mq($bp-medium) {
+    transform: scale(1.2);
+  }
 }
 
 .downT {
@@ -103,6 +129,9 @@
   left: 0.4rem;
 
   cursor: pointer;
+  @include mq($bp-medium) {
+    transform: scale(1.2);
+  }
 }
 
 .leftT {
@@ -117,6 +146,9 @@
   left: 0.4rem;
 
   cursor: pointer;
+  @include mq($bp-medium) {
+    transform: scale(1.2);
+  }
 }
 
 .rightT {
@@ -131,6 +163,9 @@
   right: 0.5rem;
 
   cursor: pointer;
+  @include mq($bp-medium) {
+    transform: scale(1.2);
+  }
 }
 
 .midCircle {
@@ -143,4 +178,7 @@
 
   border-radius: 3rem;
   background: radial-gradient($color-black-dark, $color-black);
+  @include mq($bp-medium) {
+    transform: scale(1.2);
+  }
 }
