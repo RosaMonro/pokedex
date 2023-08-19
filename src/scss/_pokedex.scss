@@ -16,6 +16,7 @@
     align-items: center;
 
     padding: $unit-24;
+    padding-bottom: 0;
 
     @include mq($bp-medium) {
       display: grid;
@@ -58,5 +59,14 @@
     &--btncross {
       margin: $unit-24;
     }
+  }
+
+  &--footer {
+    display: flex;
+    gap: $unit-10;
+
+    background-color: $color-red;
+    padding: $unit-12;
+    border-top: 1rem solid $color-red-dark;
   }
 }
