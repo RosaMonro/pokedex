@@ -3,11 +3,22 @@
   flex-direction: column;
 
   width: 100vw;
-  max-width: 92rem;
+  max-width: 90rem;
   height: 100vh;
-  // max-height: 77rem;
 
   background-color: $color-red;
+  border: solid 0.3rem $color-red-dark;
+  border-radius: $unit-6;
+  box-shadow: 5.3px 4.5px 9.6px -6px rgba(0, 0, 0, 0.19),
+    11.2px 9.6px 20px -6px rgba(0, 0, 0, 0.137),
+    18.5px 15.8px 31.6px -6px rgba(0, 0, 0, 0.113),
+    29.1px 25px 44.8px -6px rgba(0, 0, 0, 0.095),
+    49.5px 42.4px 60.5px -6px rgba(0, 0, 0, 0.077),
+    119px 102px 80px -6px rgba(0, 0, 0, 0.053);
+
+  @include mq($bp-medium) {
+    max-height: 60rem;
+  }
 
   &--main {
     display: flex;
@@ -74,4 +85,8 @@
     padding: 0 $unit-12;
     border-top: 1rem solid $color-red-dark;
   }
+}
+
+.main {
+  color: pink;
 }

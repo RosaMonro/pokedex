@@ -1,13 +1,19 @@
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  // width: 100vw;
-  // height: 100vh;
+  height: 100vh;
   margin: 0;
 
   background-color: #f2ffef;
