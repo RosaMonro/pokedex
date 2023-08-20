@@ -1,26 +1,31 @@
 .pokedex {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   width: 100vw;
   max-width: 90rem;
-  height: 100vh;
+  // height: 100vh;
 
   background-color: $color-red;
   border: solid 0.3rem $color-red-dark;
   border-radius: $unit-6;
-  box-shadow: 5.3px 4.5px 9.6px -6px rgba(0, 0, 0, 0.19),
-    11.2px 9.6px 20px -6px rgba(0, 0, 0, 0.137),
-    18.5px 15.8px 31.6px -6px rgba(0, 0, 0, 0.113),
-    29.1px 25px 44.8px -6px rgba(0, 0, 0, 0.095),
-    49.5px 42.4px 60.5px -6px rgba(0, 0, 0, 0.077),
-    119px 102px 80px -6px rgba(0, 0, 0, 0.053);
+  box-shadow: 2.4px 2.2px 4.1px -6px rgba(0, 0, 0, 0.14),
+    -4.8px 4.4px 8.1px -6px rgba(0, 0, 0, 0.115),
+    -7.3px 6.6px 11.8px -6px rgba(0, 0, 0, 0.106),
+    -9.7px 8.8px 15.4px -6px rgba(0, 0, 0, 0.1),
+    -12.4px 11.2px 18.7px -6px rgba(0, 0, 0, 0.094),
+    -15.4px 13.9px 22.1px -6px rgba(0, 0, 0, 0.089),
+    -19.1px 17.3px 25.7px -6px rgba(0, 0, 0, 0.082),
+    -24.3px 22px 30.3px -6px rgba(0, 0, 0, 0.074),
+    -33.8px 30.7px 38.2px -6px rgba(0, 0, 0, 0.062),
+    -64px 58px 56px -6px rgba(0, 0, 0, 0.045);
 
   @include mq($bp-medium) {
     max-height: 60rem;
   }
 
-  &--main {
+  &--screen-buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,8 +90,24 @@
     padding: 0 $unit-12;
     border-top: 1rem solid $color-red-dark;
   }
-}
 
-.main {
-  color: pink;
+  &--input {
+    &__mobile {
+      width: 100%;
+      padding: $unit-24 $unit-24 0 $unit-24;
+
+      @include mq($bp-medium) {
+        display: none;
+      }
+    }
+
+    &__desktop {
+      display: none;
+      padding: 0 $unit-24 $unit-24 $unit-24;
+
+      @include mq($bp-medium) {
+        display: block;
+      }
+    }
+  }
 }

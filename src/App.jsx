@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Topbar from "./components/Topbar/Topbar";
 import BtnCross from "./components/BtnCross/BtnCross";
+import Input from "./components/Input/Input";
 import Home from "./views/Home";
 import Button from "./components/Button/Button";
 import "./scss/global.scss";
@@ -8,15 +9,19 @@ import "./scss/global.scss";
 function App() {
   return (
     <>
-      <main className="main">
+      <main>
         <div className="pokedex">
           <Topbar />
-          <div className="pokedex--main">
+          <div className="pokedex--screen-buttons">
             <div className="pokedex--screen">
               <Routes>
                 <Route path="/" element={<Home />} />
               </Routes>
             </div>
+            <div className="pokedex--input__mobile">
+              <Input />
+            </div>
+
             <div className="pokedex--commands">
               <div className="pokedex--commands--btncross">
                 <BtnCross />
@@ -25,6 +30,11 @@ function App() {
                 <Button text="HOME" />
                 <Button text="FAVS" />
               </div>
+            </div>
+          </div>
+          <div className="pokedex--input">
+            <div className="pokedex--input__desktop">
+              <Input />
             </div>
           </div>
           <div className="pokedex--footer">

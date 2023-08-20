@@ -1,0 +1,29 @@
+@import "../../scss/_variables";
+@import "../../scss/_mixins";
+
+input[type="text"] {
+  height: 3.8rem;
+  width: 100%;
+  padding: $unit-10;
+
+  border: solid 0.2rem $color-red-dark;
+  border-radius: 6px;
+  background-color: $color-red-light;
+  color: $color-black;
+  font-family: $font-machine;
+  font-size: $font-size-16;
+
+  &:focus {
+    border: 0.3rem solid $color-white;
+  }
+
+  // @include mq($bp-medium) {
+  //   display: none;
+  // }
+}
+
+input[type="text"]::placeholder {
+  color: $color-red-dark;
+  font-family: $font-machine;
+  font-size: $font-size-16;
+}
