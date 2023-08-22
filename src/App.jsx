@@ -32,10 +32,8 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="pokedex--input">
-            <div className="pokedex--input__desktop">
-              <Input />
-            </div>
+          <div className="pokedex--input__desktop">
+            <Input />
           </div>
           <div className="pokedex--footer">
             <p>Pokedex 2023</p>

@@ -59,10 +59,13 @@
     flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
+    gap: $unit-48;
     width: 100%;
+    max-width: 48rem;
 
     @include mq($bp-medium) {
       flex-direction: column;
+      margin-bottom: -1rem;
     }
 
     &--btns {
@@ -70,11 +73,6 @@
       flex-direction: column;
       gap: $unit-10;
       width: 100%;
-      margin: $unit-24;
-    }
-
-    &--btncross {
-      margin: $unit-24;
     }
   }
 
@@ -91,23 +89,22 @@
     border-top: 1rem solid $color-red-dark;
   }
 
-  &--input {
-    &__mobile {
-      width: 100%;
-      padding: $unit-24 $unit-24 0 $unit-24;
+  &--input__mobile {
+    width: 100%;
+    max-width: 48rem;
+    padding: $unit-24 0;
 
-      @include mq($bp-medium) {
-        display: none;
-      }
-    }
-
-    &__desktop {
+    @include mq($bp-medium) {
       display: none;
-      padding: 0 $unit-24 $unit-24 $unit-24;
+    }
+  }
 
-      @include mq($bp-medium) {
-        display: block;
-      }
+  &--input__desktop {
+    display: none;
+    padding: 0 $unit-24 $unit-24 $unit-24;
+
+    @include mq($bp-medium) {
+      display: block;
     }
   }
 }
