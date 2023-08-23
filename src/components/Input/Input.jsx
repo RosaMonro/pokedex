@@ -6,7 +6,7 @@ export default function Input(props) {
     <>
       <div className="input-wrapper">
         <input
-          type="search"
+          type="text"
           id="searchInput"
           aria-label="Search pokemon by name"
           placeholder="Search by name"
