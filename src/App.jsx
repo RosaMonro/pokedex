@@ -18,9 +18,9 @@ function App() {
                 <Route path="/" element={<Home />} />
               </Routes>
             </div>
-            <div className="pokedex--input__mobile">
+            <form className="pokedex--input__mobile">
               <Input />
-            </div>
+            </form>
 
             <div className="pokedex--commands">
               <div className="pokedex--commands--btncross">
@@ -32,9 +32,9 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="pokedex--input__desktop">
+          <form className="pokedex--input__desktop">
             <Input />
-          </div>
+          </form>
           <div className="pokedex--footer">
             <p>Pokedex 2023</p>
           </div>

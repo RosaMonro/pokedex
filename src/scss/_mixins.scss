@@ -1,12 +1,12 @@
 /*-----TAMAÑOS ICONOS----*/
 
-$w-small: 2rem;
-$w-medium: 2.5rem;
-$w-large: 3rem;
+$w-small: 1.5rem;
+$w-medium: 2rem;
+$w-large: 2.5rem;
 
-$h-small: 2rem;
-$h-medium: 2.5rem;
-$h-large: 3rem;
+$h-small: 1.5rem;
+$h-medium: 2rem;
+$h-large: 2.5rem;
 
 @mixin icon($width, $height) {
   width: $width;
@@ -20,7 +20,7 @@ $h-large: 3rem;
 
 /*-----MEDIA QUERIES-----*/
 
-$bp-large: 90rem; //11440px
+$bp-large: 90rem; //1440px
 $bp-medium: 40rem; //650px
 $bp-small: 22.5rem; //360px
 
