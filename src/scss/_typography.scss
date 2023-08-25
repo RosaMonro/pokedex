@@ -32,13 +32,14 @@ h6,
 
 /*---parrafos---*/
 
-p.font-size-14 {
+p {
   font-family: $font-screen;
-  font-size: $font-size-14;
+  font-size: $font-size-12;
   color: $color-black-dark;
   margin: 0;
 
-  // @include mq ($bp-small-desktop) { //1024px
-  //     font-size: $font-size-16;
-  // }
+  @include mq($bp-large) {
+    //830px
+    font-size: $font-size-14;
+  }
 }

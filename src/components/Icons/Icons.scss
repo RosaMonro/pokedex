@@ -3,9 +3,8 @@
 @import "../../scss/_functions";
 
 .icon {
-  margin: $unit-12;
-
   &__position-absolute {
+    margin: $unit-12;
     position: absolute;
     right: 0;
   }

@@ -1,0 +1,29 @@
+@import "../../scss/_variables";
+
+.cardmini {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: $color-skyblue-light;
+  border-radius: 3px;
+
+  padding: $unit-10;
+  flex-grow: 1;
+
+  &--header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--image {
+    display: flex;
+    justify-content: center;
+
+    & > img {
+      width: 40%;
+    }
+  }
+}

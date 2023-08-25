@@ -12,6 +12,7 @@ $colors: (
 
   "deepblie": $color-deepblue,
   "skyblue": $color-skyblue,
+  "skyblue-light": $color-skyblue-light,
 
   "fuchsia": $color-fuchsia,
   "green": $color-green,
@@ -31,6 +32,7 @@ $colors: (
 /*-----mapa y loop de tamaños tipografía---*/
 
 $sizes: (
+  "size-12": $font-size-12,
   "size-14": $font-size-14,
   "size-16": $font-size-16,
   "size-18": $font-size-18,

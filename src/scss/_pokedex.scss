@@ -42,11 +42,19 @@
   }
 
   &--screen {
-    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+
     height: 30rem;
     width: 100%;
     max-width: 48rem;
+    // max-height: 32rem;
     margin: 0 auto;
+
+    border-radius: 12px;
+    background-color: $color-white;
+
+    overflow: hidden;
 
     @include mq($bp-medium) {
       width: 100%;
