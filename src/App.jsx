@@ -14,7 +14,9 @@ function App() {
           <Topbar />
           <div className="pokedex--screen-buttons">
             <div className="pokedex--screen">
-              <Routes>{/* <Route path="/" element={<Home />} /> */}</Routes>
+              <Routes>
+                <Route path="/" element={<Home />} />
+              </Routes>
             </div>
             <form className="pokedex--input__mobile">
               <Input />

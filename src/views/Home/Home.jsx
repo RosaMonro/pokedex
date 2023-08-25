@@ -6,6 +6,15 @@ export default function Home() {
     <>
       <div className="screen-results">
         <CardMini />
+        <CardMini />
+        <CardMini />
+        <CardMini />
+        <CardMini />
+        <CardMini />
+        <CardMini />
+        <CardMini />
+        <CardMini />
+        <CardMini />
       </div>
     </>
   );

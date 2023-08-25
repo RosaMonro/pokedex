@@ -1,4 +1,5 @@
 @import "../../scss/_variables";
+@import "../../scss/_mixins";
 
 .cardmini {
   display: flex;
@@ -8,8 +9,13 @@
   background-color: $color-skyblue-light;
   border-radius: 3px;
 
-  padding: $unit-10;
-  flex-grow: 1;
+  font-size: $font-size-14;
+
+  padding: $unit-6;
+  @include mq($bp-medium) {
+    //650px
+    font-size: $font-size-16;
+  }
 
   &--header {
     display: flex;
@@ -25,5 +31,11 @@
     & > img {
       width: 40%;
     }
+  }
+
+  &--name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
