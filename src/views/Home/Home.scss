@@ -2,8 +2,7 @@
 
 .screen-results {
   display: grid;
-  grid-template: auto / repeat(auto-fit, minmax(10rem, 1fr));
-  // grid-template-columns: repeat(2, 1fr);
+  grid-template: auto / repeat(auto-fit, minmax(12rem, 1fr));
   grid-gap: 1rem;
 
   height: 100%;
@@ -14,5 +13,5 @@
   border-radius: 6px;
 
   overflow-y: auto;
-  flex-grow: 1;
+  // flex-grow: 1;
 }

@@ -15,6 +15,12 @@ export default function Home() {
         <CardMini />
         <CardMini />
         <CardMini />
+        <CardMini />
+        <CardMini />
+        <CardMini />
+        <CardMini />
+        <CardMini />
+        <CardMini />
       </div>
     </>
   );

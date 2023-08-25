@@ -12,6 +12,7 @@
   font-size: $font-size-14;
 
   padding: $unit-6;
+
   @include mq($bp-medium) {
     //650px
     font-size: $font-size-16;
