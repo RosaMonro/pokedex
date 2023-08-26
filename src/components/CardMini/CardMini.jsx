@@ -21,7 +21,7 @@ export default function CardMini(props) {
           </div>
         </div>
         <div className="cardmini--image">
-          <img src="/public/pokeball.webp" alt="" />
+          <img src="/pokeball.webp" alt="" />
         </div>
         <div className="cardmini--name">
           <p className="h2">Nombre Largo</p>
