@@ -1,9 +1,10 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Topbar from "./components/Topbar/Topbar";
 import BtnCross from "./components/BtnCross/BtnCross";
 import Input from "./components/Input/Input";
 import Button from "./components/Button/Button";
 import Home from "./views/Home/Home";
+import Favs from "./views/Favs/Favs";
 import "./scss/global.scss";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <div className="pokedex--screen">
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/Favs" element={<Favs />} />
               </Routes>
             </div>
             <form className="pokedex--input__mobile">
@@ -27,8 +29,12 @@ function App() {
                 <BtnCross />
               </div>
               <div className="pokedex--commands--btns">
-                <Button text="HOME" />
-                <Button text="FAVS" />
+                <Link to="/">
+                  <Button text="HOME" />
+                </Link>
+                <Link to="/Favs">
+                  <Button text="FAVS" />
+                </Link>
               </div>
             </div>
           </div>

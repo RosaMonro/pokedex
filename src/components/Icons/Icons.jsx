@@ -20,7 +20,7 @@ export default function Icons(props) {
       xmlns="http://www.w3.org/2000/svg"
       alt={props.alt}
     >
-      <g clip-path="url(#clip0_1921_843)">
+      <g clipPath="url(#clip0_1921_843)">
         <path d={iconsMap[props.name]} fill="currentColor" />
       </g>
       <defs>
