@@ -19,7 +19,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Favs" element={<Favs />} />
-                <Route path="/Single" element={<Single />} />
+                <Route path="/Single/:name" element={<Single />} />
               </Routes>
             </div>
             <form className="pokedex--input__mobile">
