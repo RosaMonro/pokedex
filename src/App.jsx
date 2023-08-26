@@ -5,6 +5,7 @@ import Input from "./components/Input/Input";
 import Button from "./components/Button/Button";
 import Home from "./views/Home/Home";
 import Favs from "./views/Favs/Favs";
+import Single from "./views/Single/Single";
 import "./scss/global.scss";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Favs" element={<Favs />} />
+                <Route path="/Single" element={<Single />} />
               </Routes>
             </div>
             <form className="pokedex--input__mobile">

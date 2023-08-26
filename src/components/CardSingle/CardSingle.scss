@@ -1,13 +1,10 @@
 @import "../../scss/_variables";
 @import "../../scss/_mixins";
 
-.cardmini {
+.cardsingle {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  background-color: $color-skyblue-light;
-  border-radius: 3px;
   padding: $unit-6;
 
   font-size: $font-size-14;
@@ -22,20 +19,32 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    padding-bottom: $unit-24;
   }
 
   &--image {
     display: flex;
     justify-content: center;
 
+    padding-bottom: $unit-24;
+
     & > img {
-      width: 40%;
+      width: 35%;
     }
   }
 
-  &--name {
+  &--info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+
+    &--data {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      padding-bottom: $unit-12;
+    }
   }
 }

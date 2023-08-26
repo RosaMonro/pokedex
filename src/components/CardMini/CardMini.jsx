@@ -7,7 +7,7 @@ export default function CardMini(props) {
       <div className="cardmini">
         <div className="cardmini--header">
           <div className="cardmini--header--number">
-            <p className="h2">#100</p>
+            <p className="h4">#100</p>
           </div>
 
           <div className="cardmini--header--icon">
@@ -24,7 +24,7 @@ export default function CardMini(props) {
           <img src="/pokeball.webp" alt="" />
         </div>
         <div className="cardmini--name">
-          <p className="h2">Nombre Largo</p>
+          <p className="h4">Nombre Largo</p>
         </div>
       </div>
     </>
