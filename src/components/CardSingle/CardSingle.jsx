@@ -2,11 +2,12 @@ import Icons from "../Icons/Icons";
 import "./CardSingle.scss";
 
 export default function CardSingle(props) {
+  //pokemon.id
   return (
     <>
       <div className="cardsingle">
         <div className="cardsingle--header">
-          <div className="h2 cardsingle--header--number">#200</div>
+          <div className="h2 cardsingle--header--number">#{props.number}</div>
           <div className="h1 cardsingle--header--name">{props.name}</div>
           <div className="cardsingle--header--icon">
             <Icons
