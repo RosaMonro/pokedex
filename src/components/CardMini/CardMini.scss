@@ -17,6 +17,10 @@
     font-size: $font-size-16;
   }
 
+  &--link {
+    text-decoration: none;
+  }
+
   &--header {
     display: flex;
     flex-direction: row;

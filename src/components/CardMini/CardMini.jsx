@@ -6,7 +6,11 @@ import "./CardMini.scss";
 export default function CardMini({ pokemon }) {
   return (
     <>
-      <Link to="/Single">
+      <Link
+        to="/Single"
+        aria-label={`This link goes to ${pokemon.name}'s page`}
+        className="cardmini--link"
+      >
         <div className="cardmini">
           <div className="cardmini--header">
             <div className="cardmini--header--number">

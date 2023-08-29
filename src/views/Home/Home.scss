@@ -14,3 +14,10 @@
 
   overflow-y: auto;
 }
+
+.load-more {
+  text-align: center;
+  grid-column: 1 / -1; /* Comienza en la primera columna y termina en la última columna */
+  padding: $unit-12;
+  cursor: pointer;
+}
