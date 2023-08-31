@@ -2,7 +2,6 @@ import Icons from "../Icons/Icons";
 import "./CardSingle.scss";
 
 export default function CardSingle(props) {
-  //pokemon.id
   return (
     <>
       <div className="cardsingle">
@@ -13,7 +12,7 @@ export default function CardSingle(props) {
             <Icons
               name={"IconFav"}
               isAbsolute={false}
-              size="madium"
+              size="medium"
               color="black-light"
               alt="icono de favoritos"
             ></Icons>
@@ -27,8 +26,8 @@ export default function CardSingle(props) {
         <div className="cardsingle--info">
           <div className="cardsingle--info--data">
             <p>
-              rosa maría montero roman rosa maría montero roman rosa maria
-              montero roman
+              Lorem ipsum dolor sit amet consectetur adipiscing elit tempor,
+              suspendisse
             </p>
           </div>
           <div className="cardsingle--info--description">

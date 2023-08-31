@@ -55,7 +55,7 @@ export const PokemonProvider = ({ children }) => {
     setLoading(false);
   };
 
-  //LLAMAR A UN POKEMON POR SU ID
+  //LLAMADA A UN POKEMON POR SU ID
   //así cuando seleccione un pokemon, se abrirá
 
   const getPokemonsByID = async (id) => {
@@ -64,6 +64,16 @@ export const PokemonProvider = ({ children }) => {
     const response = await fetch(`${baseURL}pokemon/${id}`);
     const data = await response.json();
     return data;
+  };
+
+  //LLAMADA A UN POKEMON POR SU NOMBRE (para usar en el input)
+
+  const searchPokemonsByName = async (name) => {
+    try {
+      const response = await fetch(`${baseURL}pokemon/${name}`);
+      const data = await response.json();
+      return data;
+    } catch (err) {}
   };
 
   useEffect(() => {
@@ -76,7 +86,12 @@ export const PokemonProvider = ({ children }) => {
 
   return (
     <PokemonContext.Provider
-      value={{ allPokemons, totalPokemons, getPokemonsByID }}
+      value={{
+        allPokemons,
+        totalPokemons,
+        getPokemonsByID,
+        searchPokemonsByName,
+      }}
     >
       {children}
     </PokemonContext.Provider>
