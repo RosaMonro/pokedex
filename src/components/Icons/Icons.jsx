@@ -19,6 +19,7 @@ export default function Icons(props) {
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
       alt={props.alt}
+      onClick={props.onClick}
     >
       <g clipPath="url(#clip0_1921_843)">
         <path d={iconsMap[props.name]} fill="currentColor" />
