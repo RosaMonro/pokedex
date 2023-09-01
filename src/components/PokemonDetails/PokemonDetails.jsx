@@ -1,14 +1,16 @@
 import Icons from "../Icons/Icons";
-import "./CardSingle.scss";
+import "./PokemonDetails.scss";
 
-export default function CardSingle(props) {
+export default function PokemonDetails(props) {
   return (
     <>
-      <div className="cardsingle">
-        <div className="cardsingle--header">
-          <div className="h2 cardsingle--header--number">#{props.number}</div>
-          <div className="h1 cardsingle--header--name">{props.name}</div>
-          <div className="cardsingle--header--icon">
+      <div className="pokemondetails">
+        <div className="pokemondetails--header">
+          <div className="h2 pokemondetails--header--number">
+            #{props.number}
+          </div>
+          <div className="h1 pokemondetails--header--name">{props.name}</div>
+          <div className="pokemondetails--header--icon">
             <Icons
               name={"IconFav"}
               isAbsolute={false}
@@ -19,18 +21,18 @@ export default function CardSingle(props) {
           </div>
         </div>
 
-        <div className="cardsingle--image">
+        <div className="pokemondetails--image">
           <img src="/pokeball.webp" alt="" />
         </div>
 
-        <div className="cardsingle--info">
-          <div className="cardsingle--info--data">
+        <div className="pokemondetails--info">
+          <div className="pokemondetails--info--data">
             <p>
               Lorem ipsum dolor sit amet consectetur adipiscing elit tempor,
               suspendisse
             </p>
           </div>
-          <div className="cardsingle--info--description">
+          <div className="pokemondetails--info--description">
             <p>
               Lorem ipsum dolor sit amet consectetur adipiscing elit tempor,
               suspendisse pulvinar penatibus taciti ornare integer sodales

@@ -5,7 +5,7 @@ import Input from "./components/Input/Input";
 import Button from "./components/Button/Button";
 import Home from "./views/Home/Home";
 import Favs from "./views/Favs/Favs";
-import Single from "./views/Single/Single";
+import PokemonPage from "./views/PokemonPage/PokemonPage";
 import "./scss/global.scss";
 import { PokemonProvider } from "./context/PokemonProvider";
 
@@ -21,7 +21,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/Favs" element={<Favs />} />
-                  <Route path="/Single/:name" element={<Single />} />
+                  <Route path="/PokemonPage/:name" element={<PokemonPage />} />
                 </Routes>
               </div>
               <form className="pokedex--input__mobile">

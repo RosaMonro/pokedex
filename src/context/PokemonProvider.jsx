@@ -8,30 +8,24 @@ export const PokemonProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [active, setActive] = useState(false);
 
-  // LLAMADA A LOS 20 PRIMEOS POKEMONS
+  // LLAMADA A LOS X PRIMEOS POKEMONS
 
-  const getAllPokemons = async (limit = 50) => {
+  const getAllPokemons = async (limit = 25) => {
     const baseURL = "https://pokeapi.co/api/v2/";
     const response = await fetch(
       `${baseURL}pokemon?limit=${limit}&offset=${offset}`
     );
     const data = await response.json();
 
-    //para recorrer el arreglo results de la data
-    //ya que de momento solo muestra la url y el name
-    //Hacemos un fetch de cada pokemon para que nos de la info detallada
-    const promises = data.results.map(async (pokemon) => {
-      const response = await fetch(pokemon.url);
-      const data = await response.json();
-      return data;
+    const results = data.results.map((pokemon, index) => {
+      return {
+        name: pokemon.name,
+        id: index + 1,
+        url: pokemon.url,
+      };
     });
 
-    //Promise.all() es una función que toma un array de promesas y devuelve una nueva promesa.
-    //Esta promesa se resuelve cuando todas las promesas en el arreglo original se han resuelto
-    //o cuando una de ellas se rechaza.
-    const results = await Promise.all(promises);
-
-    setAllPokemons([...allPokemons, ...results]); //están tomando los Pokémon previamente almacenados en allPokemons y los recién obtenidos en results, y se están combinando en un solo arreglo que los contiene todos.
+    setAllPokemons([...allPokemons, ...results]); //están tomando los Pokémon previamente almacenados en allPokemons y los recién obtenidos en data.results, y se están combinando en un solo array que los contiene todos.
     setLoading(false);
   };
 
@@ -43,13 +37,13 @@ export const PokemonProvider = ({ children }) => {
     const response = await fetch(`${baseURL}pokemon?limit=100000&offset=0`);
     const data = await response.json();
 
-    const promises = data.results.map(async (pokemon) => {
-      const response = await fetch(pokemon.url);
-      const data = await response.json();
-      return data;
+    const results = data.results.map((pokemon, index) => {
+      return {
+        name: pokemon.name,
+        id: index + 1,
+        url: pokemon.url,
+      };
     });
-
-    const results = await Promise.all(promises);
 
     setTotalPokemons(results);
     setLoading(false);

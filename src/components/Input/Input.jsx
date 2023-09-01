@@ -17,7 +17,8 @@ export default function Input(props) {
 
   const onClick = async (e) => {
     const data = await searchPokemonsByName(search);
-    setPokemon(data);
+    // setPokemon(data);
+    console.log(data);
   };
 
   return (
