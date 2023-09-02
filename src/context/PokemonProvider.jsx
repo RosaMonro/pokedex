@@ -2,35 +2,13 @@ import { useEffect, useState } from "react";
 import { PokemonContext } from "./PokemonContext";
 
 export const PokemonProvider = ({ children }) => {
-  const [allPokemons, setAllPokemons] = useState([]);
+  const [visiblePokemons, setVisiblePokemons] = useState([]);
   const [totalPokemons, setTotalPokemons] = useState([]);
   const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(true);
   const [active, setActive] = useState(false);
 
-  // LLAMADA A LOS X PRIMEOS POKEMONS
-
-  const getAllPokemons = async (limit = 25) => {
-    const baseURL = "https://pokeapi.co/api/v2/";
-    const response = await fetch(
-      `${baseURL}pokemon?limit=${limit}&offset=${offset}`
-    );
-    const data = await response.json();
-
-    const results = data.results.map((pokemon, index) => {
-      return {
-        name: pokemon.name,
-        id: index + 1,
-        url: pokemon.url,
-      };
-    });
-
-    setAllPokemons([...allPokemons, ...results]); //están tomando los Pokémon previamente almacenados en allPokemons y los recién obtenidos en data.results, y se están combinando en un solo array que los contiene todos.
-    setLoading(false);
-  };
-
   //LLAMADA A TODOS LOS POKEMONS.
-  //así cuando hagamos un filtrado, se hará sobre todos los pokemons, no sobre los 20 primeros.
 
   const getTotalPokemons = async () => {
     const baseURL = "https://pokeapi.co/api/v2/";
@@ -38,14 +16,17 @@ export const PokemonProvider = ({ children }) => {
     const data = await response.json();
 
     const results = data.results.map((pokemon, index) => {
+      const id = index + 1;
       return {
         name: pokemon.name,
-        id: index + 1,
+        id,
         url: pokemon.url,
+        imageUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${id}.png`,
       };
     });
 
     setTotalPokemons(results);
+    setVisiblePokemons(results);
     setLoading(false);
   };
 
@@ -62,17 +43,12 @@ export const PokemonProvider = ({ children }) => {
 
   //LLAMADA A UN POKEMON POR SU NOMBRE (para usar en el input)
 
-  const searchPokemonsByName = async (name) => {
-    try {
-      const response = await fetch(`${baseURL}pokemon/${name}`);
-      const data = await response.json();
-      return data;
-    } catch (err) {}
+  const searchPokemonByName = async (name) => {
+    const pokemonsFiltered = totalPokemons.filter((pokemon) => {
+      return pokemon.name.startsWith(name);
+    });
+    setVisiblePokemons(pokemonsFiltered);
   };
-
-  useEffect(() => {
-    getAllPokemons();
-  }, []);
 
   useEffect(() => {
     getTotalPokemons();
@@ -81,10 +57,10 @@ export const PokemonProvider = ({ children }) => {
   return (
     <PokemonContext.Provider
       value={{
-        allPokemons,
+        visiblePokemons,
         totalPokemons,
         getPokemonsByID,
-        searchPokemonsByName,
+        searchPokemonByName,
       }}
     >
       {children}
