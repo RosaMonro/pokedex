@@ -13,7 +13,7 @@ export default function Home() {
         {visiblePokemons.map((pokemon) => (
           <CardMini pokemon={pokemon} key={pokemon.id} />
         ))}
-        <p className="load-more font-size-14">Click to load more</p>
+        {/* <p className="load-more font-size-14">Click to load more</p> */}
       </div>
     </>
   );

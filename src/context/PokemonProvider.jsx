@@ -12,7 +12,7 @@ export const PokemonProvider = ({ children }) => {
 
   const getTotalPokemons = async () => {
     const baseURL = "https://pokeapi.co/api/v2/";
-    const response = await fetch(`${baseURL}pokemon?limit=100000&offset=0`);
+    const response = await fetch(`${baseURL}pokemon?limit=151&offset=0`);
     const data = await response.json();
 
     const results = data.results.map((pokemon, index) => {
