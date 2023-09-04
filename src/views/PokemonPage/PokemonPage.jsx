@@ -2,7 +2,7 @@ import PokemonDetails from "../../components/PokemonDetails/PokemonDetails";
 import { useParams } from "react-router-dom";
 import "./PokemonPage.scss";
 
-export default function PokemonPage(props) {
+export default function PokemonPage() {
   const { name } = useParams();
   // console.log(name);
 

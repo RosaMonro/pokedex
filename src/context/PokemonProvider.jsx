@@ -30,20 +30,21 @@ export const PokemonProvider = ({ children }) => {
     setLoading(false);
   };
 
-  //LLAMADA A UN POKEMON POR SU ID
+  //LLAMADA A UN POKEMON POR SU NOMBRE
   //así cuando seleccione un pokemon, se abrirá
 
-  const getPokemonsByID = async (id) => {
+  const getPokemonByName = async (id) => {
     const baseURL = "https://pokeapi.co/api/v2/";
 
     const response = await fetch(`${baseURL}pokemon/${id}`);
     const data = await response.json();
-    return data;
+    // return data;
+    console.log(data);
   };
 
   //LLAMADA A UN POKEMON POR SU NOMBRE (para usar en el input)
 
-  const searchPokemonByName = async (name) => {
+  const searchPokemon = async (name) => {
     const pokemonsFiltered = totalPokemons.filter((pokemon) => {
       return pokemon.name.startsWith(name);
     });
@@ -59,8 +60,8 @@ export const PokemonProvider = ({ children }) => {
       value={{
         visiblePokemons,
         totalPokemons,
-        getPokemonsByID,
-        searchPokemonByName,
+        getPokemonByName,
+        searchPokemon,
       }}
     >
       {children}

@@ -1,18 +1,14 @@
-import Icons from "../Icons/Icons";
 import "./Input.scss";
 import { PokemonContext } from "../../context/PokemonContext";
 import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
-
-// const { useState } = React;
 
 export default function Input(props) {
-  const { searchPokemonByName } = useContext(PokemonContext);
+  const { searchPokemon } = useContext(PokemonContext);
   const [search, setSearch] = useState("");
 
   const onChange = (e) => {
-    setSearch(e.target.value);
-    searchPokemonByName(e.target.value);
+    setSearch(e.target.value); //actualiza el estado de search con el valor que contiene e.target.value, que en este caso es el valor del input. Así cuando se escribe algo en el input, el estado de search se actualiza, lo que desencadena una búsqueda en tiempo real llamando a searchPokemon
+    searchPokemon(e.target.value); //llama a la f(x) searchPokemon (a tarvés de contexto) con el valor del campo del input como argumento
   };
 
   return (

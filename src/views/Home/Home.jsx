@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import CardMini from "../../components/CardMini/CardMini";
 import "./Home.scss";
 import { useContext } from "react";

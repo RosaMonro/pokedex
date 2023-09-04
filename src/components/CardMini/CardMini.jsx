@@ -6,8 +6,8 @@ export default function CardMini({ pokemon }) {
   return (
     <>
       <Link
-        to="/PokemonPage"
-        aria-label={`Este enlace lleva a la página de ${pokemon.name}`}
+        to={`/pokemonPage/${pokemon.name}`}
+        aria-label={`Esta tarjeta te lleva a la página de detalles de ${pokemon.name}`}
         className="cardmini--link"
       >
         <div className="cardmini">
