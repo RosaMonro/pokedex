@@ -46,7 +46,7 @@ export const PokemonProvider = ({ children }) => {
 
   const searchPokemon = async (name) => {
     const pokemonsFiltered = totalPokemons.filter((pokemon) => {
-      return pokemon.name.startsWith(name);
+      return pokemon.name.startsWith(name.toLowerCase());
     });
     setVisiblePokemons(pokemonsFiltered);
   };
@@ -62,6 +62,8 @@ export const PokemonProvider = ({ children }) => {
         totalPokemons,
         getPokemonByName,
         searchPokemon,
+        loading,
+        setLoading,
       }}
     >
       {children}

@@ -5,7 +5,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   padding: $unit-6;
+  height: 100%;
 
   font-size: $font-size-14;
 
@@ -19,20 +21,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 
     &--name {
       text-transform: capitalize;
-    }
-  }
-
-  &--image {
-    display: flex;
-    justify-content: center;
-
-    padding-bottom: $unit-24;
-
-    & > img {
-      width: 45%;
     }
   }
 
@@ -40,13 +32,57 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: $unit-24 0;
 
-    &--data {
+    &--imageandsize {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      justify-items: center;
+      padding-bottom: $unit-24;
+    }
+
+    &--image {
+      background-color: $color-skyblue-light;
+      border-radius: 100%;
+      width: 15rem;
+      height: 15rem;
+
+      padding-bottom: $unit-24;
+
+      & > img {
+        width: 100%;
+        bottom: -0.5rem;
+      }
+    }
+
+    &--size {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
       width: 100%;
-      padding-bottom: $unit-12;
+      gap: $unit-12;
+    }
+
+    &--statistics {
+      display: grid;
+      grid-template: auto / repeat(auto-fill, minmax(12rem, 1fr));
+
+      gap: $unit-6;
+      padding: $unit-6;
+
+      &__card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        min-height: 6rem;
+        padding: 1rem;
+
+        border: solid $color-skyblue-light 2px;
+        border-radius: 6px;
+
+        text-transform: capitalize;
+      }
     }
   }
 }

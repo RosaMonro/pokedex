@@ -10,7 +10,7 @@ export default function Loader(props) {
           cy="50"
           r="20"
           fill="none"
-          stroke-width="2"
+          stroke-width="4"
           stroke-miterlimit="10"
         />
       </svg>

@@ -30,7 +30,10 @@ function App() {
 
               <div className="pokedex--commands">
                 <div className="pokedex--commands--btncross">
-                  <BtnCross />
+                  <BtnCross
+                    onLeftClick={console.log}
+                    onRightClick={console.log}
+                  />
                 </div>
                 <div className="pokedex--commands--btns">
                   <Link to="/">
