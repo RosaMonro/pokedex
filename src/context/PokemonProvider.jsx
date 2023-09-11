@@ -18,6 +18,7 @@ export const PokemonProvider = ({ children }) => {
     const results = data.results.map((pokemon, index) => {
       const id = index + 1;
       return {
+        key: pokemon.name,
         name: pokemon.name,
         id,
         url: pokemon.url,
@@ -30,7 +31,7 @@ export const PokemonProvider = ({ children }) => {
     setLoading(false);
   };
 
-  //LLAMADA A UN POKEMON POR SU NOMBRE
+  //OBTENER UN POKEMON POR SU NOMBRE
   //así cuando seleccione un pokemon, se abrirá
 
   const getPokemonByName = async (id) => {
@@ -38,8 +39,7 @@ export const PokemonProvider = ({ children }) => {
 
     const response = await fetch(`${baseURL}pokemon/${id}`);
     const data = await response.json();
-    // return data;
-    console.log(data);
+    return data;
   };
 
   //LLAMADA A UN POKEMON POR SU NOMBRE (para usar en el input)

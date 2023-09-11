@@ -42,25 +42,16 @@ export default function PokemonDetails() {
         </div>
 
         <div className="pokemondetails--image">
-          <img src="/pokeball.webp" alt="" />
+          <img
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${pokemon.id}.png`}
+            alt={`Imagen de ${pokemon.name}`}
+          />
         </div>
 
         <div className="pokemondetails--info">
           <div className="pokemondetails--info--data">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit tempor,
-              suspendisse
-            </p>
-          </div>
-          <div className="pokemondetails--info--description">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit tempor,
-              suspendisse pulvinar penatibus taciti ornare integer sodales
-              vestibulum, lectus lacinia metus pellentesque eros hac nec.
-              Porttitor potenti velit dignissim scelerisque venenatis nibh,
-              sapien ullamcorper taciti pharetra nisi commodo convallis, lacinia
-              blandit eleifend tincidunt sem.
-            </p>
+            <p>Weight: {pokemon.weight}</p>
+            <p>Height: {pokemon.height}</p>
           </div>
         </div>
       </div>

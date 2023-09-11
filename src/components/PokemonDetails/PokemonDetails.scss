@@ -19,7 +19,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: $unit-24;
+
+    &--name {
+      text-transform: capitalize;
+    }
   }
 
   &--image {
@@ -29,7 +32,7 @@
     padding-bottom: $unit-24;
 
     & > img {
-      width: 35%;
+      width: 45%;
     }
   }
 

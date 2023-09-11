@@ -11,6 +11,10 @@ export default function Input(props) {
     searchPokemon(e.target.value); //llama a la f(x) searchPokemon (a tarvés de contexto) con el valor del campo del input como argumento
   };
 
+  //PARA AÑADIR:
+  //Transformar todos los carácteres en minúsculas
+  //para poder encontrar el pokemon independientemente decómo se busque!!!
+
   return (
     <>
       <div className="input-wrapper">
