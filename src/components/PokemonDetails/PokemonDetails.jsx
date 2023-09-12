@@ -54,7 +54,7 @@ export default function PokemonDetails() {
           </div>
 
           <div className="pokemondetails--info">
-            <div className="pokemondetails--info--imageandsize">
+            <div className="pokemondetails--info--imageanddata">
               <secion className="pokemondetails--info--image">
                 <img
                   src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${pokemon.id}.png`}
@@ -62,19 +62,25 @@ export default function PokemonDetails() {
                 />
               </secion>
 
-              <section className="pokemondetails--info--size">
-                <div>
-                  <p>
-                    <strong>Weight: </strong>
-                    {pokemon.weight}
-                  </p>
-                </div>
-                <div>
-                  <p>
-                    <strong>Height: </strong>
-                    {pokemon.height}
-                  </p>
-                </div>
+              <section className="pokemondetails--info--data">
+                <p>
+                  <strong>Base experience: </strong>
+                  {pokemon.base_experience} pts
+                </p>
+                <p>
+                  <strong>Abilities: </strong>
+                  {pokemon.abilities
+                    .map((item) => item.ability.name)
+                    .join(", ")}
+                </p>
+                <p>
+                  <strong>Weight: </strong>
+                  {pokemon.weight} kg
+                </p>
+                <p>
+                  <strong>Height: </strong>
+                  {pokemon.height} cm
+                </p>
               </section>
             </div>
             <section className="pokemondetails--info--statistics">

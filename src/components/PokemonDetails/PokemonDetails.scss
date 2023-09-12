@@ -34,9 +34,9 @@
     width: 100%;
     padding: $unit-24 0;
 
-    &--imageandsize {
+    &--imageanddata {
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 5fr 4fr;
       justify-items: center;
       padding-bottom: $unit-24;
     }
@@ -55,7 +55,7 @@
       }
     }
 
-    &--size {
+    &--data {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -78,7 +78,7 @@
         min-height: 6rem;
         padding: 1rem;
 
-        border: solid $color-skyblue-light 2px;
+        background-color: $color-skyblue-light;
         border-radius: 6px;
 
         text-transform: capitalize;

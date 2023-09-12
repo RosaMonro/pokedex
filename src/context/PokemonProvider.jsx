@@ -32,7 +32,7 @@ export const PokemonProvider = ({ children }) => {
   };
 
   //OBTENER UN POKEMON POR SU NOMBRE
-  //así cuando seleccione un pokemon, se abrirá
+  //así cuando seleccione un pokemon, se abrirá en details
 
   const getPokemonByName = async (id) => {
     const baseURL = "https://pokeapi.co/api/v2/";
