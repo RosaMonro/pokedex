@@ -11,7 +11,7 @@
 
   cursor: pointer;
 
-  &-size--medium {
+  &-size--variable {
     @include icon($w-medium, $h-medium);
   }
 
@@ -25,6 +25,10 @@
 
   @include mq($bp-large) {
     @include icon($w-large, $h-large);
+  }
+
+  &-size--fixed {
+    @include icon($w-medium, $h-medium);
   }
 
   &:hover {

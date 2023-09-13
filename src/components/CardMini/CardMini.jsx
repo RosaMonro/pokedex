@@ -20,7 +20,7 @@ export default function CardMini({ pokemon }) {
               <Icons
                 name={"IconFav"}
                 isAbsolute={false}
-                size="small"
+                size="fixed"
                 color="black-light"
                 alt="icono de favoritos"
               ></Icons>

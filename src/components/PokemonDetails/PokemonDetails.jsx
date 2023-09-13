@@ -52,7 +52,7 @@ export default function PokemonDetails() {
               <Icons
                 name={"IconFav"}
                 isAbsolute={false}
-                size="medium"
+                size="variable"
                 color="black-light"
                 alt="icono de favoritos"
               ></Icons>
