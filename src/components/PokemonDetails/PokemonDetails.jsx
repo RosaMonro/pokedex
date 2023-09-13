@@ -6,7 +6,8 @@ import { PokemonContext } from "../../context/PokemonContext";
 import { useContext, useEffect, useState } from "react";
 
 export default function PokemonDetails() {
-  const { getPokemonByName, loading, setLoading } = useContext(PokemonContext);
+  const { getPokemonByName } = useContext(PokemonContext);
+  const [loading, setLoading] = useState(true);
   const [pokemon, setPokemon] = useState({}); //almacena los detalles de pokemon
   const { name } = useParams();
 
