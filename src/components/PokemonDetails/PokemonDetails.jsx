@@ -10,15 +10,21 @@ export default function PokemonDetails() {
   const [pokemon, setPokemon] = useState({}); //almacena los detalles de pokemon
   const { name } = useParams();
 
+  // const fetchPokemon = async (name) => {
+  //   try {
+  //     const data = await getPokemonByName(name);
+  //     setPokemon(data);
+  //     setLoading(false); // Después de cargar los datos con éxito, establece loading en false
+  //   } catch (error) {
+  //     console.error("Error al cargar los datos:", error);
+  //     setLoading(false); // En caso de error, también establece loading en false
+  //   }
+  // };
+
   const fetchPokemon = async (name) => {
-    try {
-      const data = await getPokemonByName(name);
-      setPokemon(data);
-      setLoading(false); // Después de cargar los datos con éxito, establece loading en false
-    } catch (error) {
-      console.error("Error al cargar los datos:", error);
-      setLoading(false); // En caso de error, también establece loading en false
-    }
+    const data = await getPokemonByName(name);
+    setPokemon(data);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -38,7 +44,7 @@ export default function PokemonDetails() {
       ) : (
         <div className="pokemondetails">
           <div className="pokemondetails--header">
-            <div className="h3 pokemondetails--header--number">
+            <div className="h2 pokemondetails--header--number">
               #{pokemon.id}
             </div>
             <div className="h1 pokemondetails--header--name">{name}</div>
@@ -55,14 +61,18 @@ export default function PokemonDetails() {
 
           <div className="pokemondetails--info">
             <div className="pokemondetails--info--imageanddata">
-              <secion className="pokemondetails--info--image">
+              <section className="pokemondetails--info--image">
                 <img
                   src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${pokemon.id}.png`}
                   alt={`Imagen de ${pokemon.name}`}
                 />
-              </secion>
+              </section>
 
               <section className="pokemondetails--info--data">
+                <p>
+                  <strong>Type: </strong>
+                  {pokemon.types.map((type) => type.type.name).join(", ")}
+                </p>
                 <p>
                   <strong>Base experience: </strong>
                   {pokemon.base_experience} pts

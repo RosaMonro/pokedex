@@ -36,9 +36,23 @@
 
     &--imageanddata {
       display: grid;
-      grid-template-columns: 5fr 4fr;
+      grid-template-rows: 5fr 4fr;
       justify-items: center;
       padding-bottom: $unit-24;
+
+      @media only screen and (min-width: 32rem) and (max-width: 40rem) {
+        grid-template-columns: 5fr 4fr;
+        grid-template-rows: none;
+      }
+
+      @include mq($bp-medium) {
+        grid-template-rows: 5fr 4fr;
+      }
+
+      @include mq($bp-large) {
+        grid-template-columns: 5fr 4fr;
+        grid-template-rows: none;
+      }
     }
 
     &--image {
@@ -61,6 +75,7 @@
       justify-content: center;
       width: 100%;
       gap: $unit-12;
+      padding: 0 $unit-6;
     }
 
     &--statistics {
@@ -68,7 +83,7 @@
       grid-template: auto / repeat(auto-fill, minmax(12rem, 1fr));
 
       gap: $unit-6;
-      padding: $unit-6;
+      // padding: $unit-6;
 
       &__card {
         display: flex;

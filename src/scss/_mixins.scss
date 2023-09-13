@@ -21,7 +21,8 @@ $h-large: 2.5rem;
 /*-----MEDIA QUERIES-----*/
 
 $bp-large: 51rem; //830px
-$bp-medium: 40rem; //650px
+$bp-medium: 40rem; //640px
+$bp-sm: 32rem; //512px
 $bp-small: 22.5rem; //360px
 
 @mixin mq($bp) {

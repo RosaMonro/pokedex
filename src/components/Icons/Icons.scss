@@ -10,11 +10,21 @@
   }
 
   cursor: pointer;
-  &-size--small {
-    @include icon($w-small, $h-small);
+
+  &-size--medium {
+    @include icon($w-medium, $h-medium);
   }
+
+  @media only screen and (min-width: 32rem) and (max-width: 40rem) {
+    @include icon($w-large, $h-large);
+  }
+
   @include mq($bp-medium) {
     @include icon($w-medium, $h-medium);
+  }
+
+  @include mq($bp-large) {
+    @include icon($w-large, $h-large);
   }
 
   &:hover {
