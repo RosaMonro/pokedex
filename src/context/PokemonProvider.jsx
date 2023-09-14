@@ -4,9 +4,9 @@ import { PokemonContext } from "./PokemonContext";
 export const PokemonProvider = ({ children }) => {
   const [visiblePokemons, setVisiblePokemons] = useState([]);
   const [totalPokemons, setTotalPokemons] = useState([]);
-  const [offset, setOffset] = useState(0);
+  // const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [active, setActive] = useState(false);
+  // const [active, setActive] = useState(false);
 
   //LLAMADA A TODOS LOS POKEMONS.
 

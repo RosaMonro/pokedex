@@ -31,12 +31,14 @@
   &--info {
     display: flex;
     flex-direction: column;
+    gap: $unit-12;
     width: 100%;
     padding: $unit-24 0;
 
     &--imageanddata {
       display: grid;
       grid-template-rows: 5fr 4fr;
+      gap: $unit-12;
       justify-items: center;
       padding-bottom: $unit-24;
 
@@ -64,8 +66,7 @@
       padding-bottom: $unit-24;
 
       & > img {
-        width: 100%;
-        bottom: -0.5rem;
+        width: 110%;
       }
     }
 
@@ -100,4 +101,9 @@
       }
     }
   }
+}
+
+.unstyled-btn {
+  background: none;
+  border: none;
 }

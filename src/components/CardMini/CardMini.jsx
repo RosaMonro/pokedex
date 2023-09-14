@@ -1,6 +1,6 @@
-import Icons from "../Icons/Icons";
 import { Link } from "react-router-dom";
 import "./CardMini.scss";
+import AddFavorites from "../Addfavorites/AddFavorites";
 
 export default function CardMini({ pokemon }) {
   return (
@@ -15,15 +15,8 @@ export default function CardMini({ pokemon }) {
             <div className="cardmini--header--number">
               <p className="h4">#{pokemon.id}</p>
             </div>
-
             <div className="cardmini--header--icon">
-              <Icons
-                name={"IconFav"}
-                isAbsolute={false}
-                size="fixed"
-                color="black-light"
-                alt="icono de favoritos"
-              ></Icons>
+              <AddFavorites />
             </div>
           </div>
           <div className="cardmini--image">

@@ -1,4 +1,5 @@
-import Icons from "../Icons/Icons";
+import AddFavorites from "../Addfavorites/AddFavorites";
+
 import Loader from "../Loader/Loader";
 import "./PokemonDetails.scss";
 import { useParams } from "react-router-dom";
@@ -50,13 +51,7 @@ export default function PokemonDetails() {
             </div>
             <div className="h1 pokemondetails--header--name">{name}</div>
             <div className="pokemondetails--header--icon">
-              <Icons
-                name={"IconFav"}
-                isAbsolute={false}
-                size="variable"
-                color="black-light"
-                alt="icono de favoritos"
-              ></Icons>
+              <AddFavorites />
             </div>
           </div>
 
@@ -86,11 +81,11 @@ export default function PokemonDetails() {
                 </p>
                 <p>
                   <strong>Weight: </strong>
-                  {pokemon.weight} kg
+                  {pokemon.weight} lbs
                 </p>
                 <p>
                   <strong>Height: </strong>
-                  {pokemon.height} cm
+                  {pokemon.height} in.
                 </p>
               </section>
             </div>

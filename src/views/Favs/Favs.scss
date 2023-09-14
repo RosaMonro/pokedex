@@ -1,1 +1,25 @@
 @import "../../scss/_variables";
+
+.nofavs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: $unit-48;
+
+  &--img {
+    width: 25%;
+    transform-origin: center;
+    animation: rotatemove 5s linear infinite;
+  }
+}
+
+@keyframes rotatemove {
+  0%,
+  100% {
+    transform: translateX(-110px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(110px) rotate(360deg);
+  }
+}
