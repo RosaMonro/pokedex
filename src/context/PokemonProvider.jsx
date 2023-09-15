@@ -4,9 +4,7 @@ import { PokemonContext } from "./PokemonContext";
 export const PokemonProvider = ({ children }) => {
   const [visiblePokemons, setVisiblePokemons] = useState([]);
   const [totalPokemons, setTotalPokemons] = useState([]);
-  // const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(true);
-  // const [active, setActive] = useState(false);
   const [favoritePokemons, setFavoritePokemons] = useState([]);
 
   //LLAMADA A TODOS LOS POKEMONS.
@@ -78,6 +76,19 @@ export const PokemonProvider = ({ children }) => {
     //El método .some se utiliza para verificar si al menos un elemento del array cumple con una cierta condición.
     //compara el id de favPokemon con el id del pokemon pasado como argumento. Si coinciden (===), la función devuelve true; sino false.
   };
+
+  // Guardar favoritos en localStorage cuando cambian
+  useEffect(() => {
+    localStorage.setItem("favoritePokemons", JSON.stringify(favoritePokemons));
+  }, [favoritePokemons]);
+
+  // Cargar favoritos desde localStorage cuando la aplicación se carga
+  useEffect(() => {
+    const savedFavorites = localStorage.getItem("favoritePokemons");
+    if (savedFavorites) {
+      setFavoritePokemons(JSON.parse(savedFavorites));
+    }
+  }, []);
 
   return (
     <PokemonContext.Provider

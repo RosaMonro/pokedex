@@ -5,12 +5,6 @@
   grid-template: auto / repeat(auto-fill, minmax(12rem, 1fr));
   grid-gap: 1rem;
 
-  //auto-fill al igual que auto-fit, trata de ajustar el
-  //número de elementos en una fila o columna según el espacio disponible.
-  //Sin embargo, cuando hay espacio adicional en la cuadrícula,
-  //auto-fill creará tantas filas o columnas adicionales como sea posible,
-  //incluso si no hay suficientes elementos para llenar todas las filas o columnas adicionales.
-
   height: 100%;
   margin: $unit-12;
   padding: $unit-12;
@@ -22,8 +16,16 @@
 }
 
 .nofavs {
+  height: 100%;
+  margin: $unit-12;
+  padding: $unit-12;
+
+  background-color: $color-skyblue;
+  border-radius: 6px;
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   gap: $unit-48;

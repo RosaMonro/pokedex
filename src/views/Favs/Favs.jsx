@@ -8,8 +8,8 @@ export default function Favs() {
 
   return (
     <>
-      <div className="screen-results">
-        {/* <div className="nofavs">
+      {favoritePokemons.length === 0 ? (
+        <div className="nofavs">
           <img
             className="nofavs--img"
             src="./public/pokeball.webp"
@@ -19,11 +19,14 @@ export default function Favs() {
             You haven't selected any Pokémon as a favorite yet.
             <br /> Give them some love! ❤
           </p>
-        </div> */}
-        {favoritePokemons.map((pokemon) => (
-          <CardMini pokemon={pokemon} key={pokemon.id} />
-        ))}
-      </div>
+        </div>
+      ) : (
+        <div className="screen-results">
+          {favoritePokemons.map((pokemon) => (
+            <CardMini pokemon={pokemon} key={pokemon.id} />
+          ))}
+        </div>
+      )}
     </>
   );
 }
