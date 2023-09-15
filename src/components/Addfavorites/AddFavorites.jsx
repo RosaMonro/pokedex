@@ -16,3 +16,6 @@ export default function AddFavorites() {
     </>
   );
 }
+
+//para que no se abra el link cuando se clica el icono:
+//event.preventDefault();

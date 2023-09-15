@@ -30,8 +30,4 @@
   &-size--fixed {
     @include icon($w-medium, $h-medium);
   }
-
-  &:hover {
-    color: $color-black-dark;
-  }
 }
