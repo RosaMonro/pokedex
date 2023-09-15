@@ -1,13 +1,17 @@
-import AddFavorites from "../Addfavorites/AddFavorites";
-
-import Loader from "../Loader/Loader";
 import "./PokemonDetails.scss";
+import AddFavorites from "../Addfavorites/AddFavorites";
+import Loader from "../Loader/Loader";
 import { useParams } from "react-router-dom";
 import { PokemonContext } from "../../context/PokemonContext";
 import { useContext, useEffect, useState } from "react";
 
 export default function PokemonDetails() {
-  const { getPokemonByName } = useContext(PokemonContext);
+  const {
+    getPokemonByName,
+    isPokemonInFavorites,
+    addFavoritePokemon,
+    removeFavoritePokemon,
+  } = useContext(PokemonContext);
   const [loading, setLoading] = useState(true);
   const [pokemon, setPokemon] = useState({}); //almacena los detalles de pokemon
   const { name } = useParams();
@@ -39,6 +43,15 @@ export default function PokemonDetails() {
   //Esto evitará que se produzca el error "id is not defined" en la primera renderización
   //antes de que los datos se carguen desde la API.
 
+  const handleFavoriteClick = (event) => {
+    event.preventDefault(); // Evitar que se active el enlace
+    if (isPokemonInFavorites(pokemon)) {
+      removeFavoritePokemon(pokemon);
+    } else {
+      addFavoritePokemon(pokemon);
+    }
+  };
+
   return (
     <>
       {loading ? (
@@ -51,7 +64,10 @@ export default function PokemonDetails() {
             </div>
             <div className="h1 pokemondetails--header--name">{name}</div>
             <div className="pokemondetails--header--icon">
-              <AddFavorites />
+              <AddFavorites
+                isFavorite={isPokemonInFavorites(pokemon)}
+                onClick={handleFavoriteClick}
+              />
             </div>
           </div>
 

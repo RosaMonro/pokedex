@@ -7,6 +7,7 @@ export const PokemonProvider = ({ children }) => {
   // const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(true);
   // const [active, setActive] = useState(false);
+  const [favoritePokemons, setFavoritePokemons] = useState([]);
 
   //LLAMADA A TODOS LOS POKEMONS.
 
@@ -55,6 +56,29 @@ export const PokemonProvider = ({ children }) => {
     getTotalPokemons();
   }, []);
 
+  //GESTIÓN DE FAVORITOS
+
+  const addFavoritePokemon = (pokemon) => {
+    if (!isPokemonInFavorites(pokemon)) {
+      // verifica si el Pokémon que se intenta agregar no está ya en la lista de favoritos
+      setFavoritePokemons([...favoritePokemons, pokemon]);
+    }
+  };
+
+  const removeFavoritePokemon = (pokemon) => {
+    const updatedFavorites = favoritePokemons.filter(
+      (favPokemon) => favPokemon.id !== pokemon.id //favPokemon representa cada elemento de favoritePokemons mientras se ejecuta la f(x) filter,
+    );
+    setFavoritePokemons(updatedFavorites);
+  };
+
+  const isPokemonInFavorites = (pokemon) => {
+    //para verificar si un Pokémon ya está en la lista de favoritos
+    return favoritePokemons.some((favPokemon) => favPokemon.id === pokemon.id);
+    //El método .some se utiliza para verificar si al menos un elemento del array cumple con una cierta condición.
+    //compara el id de favPokemon con el id del pokemon pasado como argumento. Si coinciden (===), la función devuelve true; sino false.
+  };
+
   return (
     <PokemonContext.Provider
       value={{
@@ -64,6 +88,10 @@ export const PokemonProvider = ({ children }) => {
         searchPokemon,
         loading,
         setLoading,
+        favoritePokemons,
+        addFavoritePokemon,
+        removeFavoritePokemon,
+        isPokemonInFavorites,
       }}
     >
       {children}

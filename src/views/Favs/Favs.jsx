@@ -1,9 +1,14 @@
 import "./Favs.scss";
+import { useContext } from "react";
+import { PokemonContext } from "../../context/PokemonContext";
+import CardMini from "../../components/CardMini/CardMini";
 
 export default function Favs() {
+  const { favoritePokemons } = useContext(PokemonContext);
+
   return (
     <>
-      <div className="screen-details">
+      <div className="screen-results">
         {/* <div className="nofavs">
           <img
             className="nofavs--img"
@@ -15,6 +20,9 @@ export default function Favs() {
             <br /> Give them some love! ❤
           </p>
         </div> */}
+        {favoritePokemons.map((pokemon) => (
+          <CardMini pokemon={pokemon} key={pokemon.id} />
+        ))}
       </div>
     </>
   );

@@ -1,8 +1,22 @@
 import { Link } from "react-router-dom";
 import "./CardMini.scss";
+import { PokemonContext } from "../../context/PokemonContext";
 import AddFavorites from "../Addfavorites/AddFavorites";
+import { useContext } from "react";
 
 export default function CardMini({ pokemon }) {
+  const { addFavoritePokemon, removeFavoritePokemon, isPokemonInFavorites } =
+    useContext(PokemonContext);
+
+  const handleFavoriteClick = (event) => {
+    event.preventDefault(); // Evitar que se active el enlace
+    if (isPokemonInFavorites(pokemon)) {
+      removeFavoritePokemon(pokemon);
+    } else {
+      addFavoritePokemon(pokemon);
+    }
+  };
+
   return (
     <>
       <Link
@@ -16,7 +30,10 @@ export default function CardMini({ pokemon }) {
               <p className="h4">#{pokemon.id}</p>
             </div>
             <div className="cardmini--header--icon">
-              <AddFavorites />
+              <AddFavorites
+                isFavorite={isPokemonInFavorites(pokemon)}
+                onClick={handleFavoriteClick}
+              />
             </div>
           </div>
           <div className="cardmini--image">
