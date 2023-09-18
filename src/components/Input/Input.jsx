@@ -7,13 +7,10 @@ export default function Input(props) {
   const [search, setSearch] = useState("");
 
   const onChange = (e) => {
-    setSearch(e.target.value); //actualiza el estado de search con el valor que contiene e.target.value, que en este caso es el valor del input. Así cuando se escribe algo en el input, el estado de search se actualiza, lo que desencadena una búsqueda en tiempo real llamando a searchPokemon
-    searchPokemon(e.target.value); //llama a la f(x) searchPokemon (a tarvés de contexto) con el valor del campo del input como argumento
+    const inputValue = e.target.value.toLowerCase(); // Convierte el valor del input a minúsculas
+    setSearch(inputValue); //actualiza el estado de search con el valor que contiene e.target.value, que en este caso es el valor del input. Así cuando se escribe algo en el input, el estado de search se actualiza, lo que desencadena una búsqueda en tiempo real llamando a searchPokemon
+    searchPokemon(inputValue); //llama a la f(x) searchPokemon (a tarvés de contexto) con el valor del campo del input como argumento
   };
-
-  //PARA AÑADIR:
-  //Transformar todos los carácteres en minúsculas
-  //para poder encontrar el pokemon independientemente decómo se busque!!!
 
   return (
     <>
