@@ -12,7 +12,7 @@ export default function Favs() {
         <div className="nofavs">
           <img
             className="nofavs--img"
-            src="./public/pokeball.webp"
+            src="./pokeball.webp"
             alt="rolling pokeball"
           />
           <p className="h3">
