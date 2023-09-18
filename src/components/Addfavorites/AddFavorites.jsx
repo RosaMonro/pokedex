@@ -16,6 +16,3 @@ export default function AddFavorites({ isFavorite, onClick }) {
     </>
   );
 }
-
-//para que no se abra el link cuando se clica el icono:
-//event.preventDefault();

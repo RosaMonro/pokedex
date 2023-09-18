@@ -9,7 +9,7 @@ export default function CardMini({ pokemon }) {
     useContext(PokemonContext);
 
   const handleFavoriteClick = (event) => {
-    event.preventDefault(); // Evitar que se active el enlace
+    event.preventDefault(); // Evitar que se active el link
     if (isPokemonInFavorites(pokemon)) {
       removeFavoritePokemon(pokemon);
     } else {

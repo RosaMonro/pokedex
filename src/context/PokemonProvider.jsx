@@ -57,6 +57,7 @@ export const PokemonProvider = ({ children }) => {
   //GESTIÓN DE FAVORITOS
 
   const addFavoritePokemon = (pokemon) => {
+    // console.log(pokemon);
     if (!isPokemonInFavorites(pokemon)) {
       // verifica si el Pokémon que se intenta agregar no está ya en la lista de favoritos
       setFavoritePokemons([...favoritePokemons, pokemon]);

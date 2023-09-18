@@ -16,17 +16,6 @@ export default function PokemonDetails() {
   const [pokemon, setPokemon] = useState({}); //almacena los detalles de pokemon
   const { name } = useParams();
 
-  // const fetchPokemon = async (name) => {
-  //   try {
-  //     const data = await getPokemonByName(name);
-  //     setPokemon(data);
-  //     setLoading(false); // Después de cargar los datos con éxito, establece loading en false
-  //   } catch (error) {
-  //     console.error("Error al cargar los datos:", error);
-  //     setLoading(false); // En caso de error, también establece loading en false
-  //   }
-  // };
-
   const fetchPokemon = async (name) => {
     const data = await getPokemonByName(name);
     setPokemon(data);
@@ -43,12 +32,21 @@ export default function PokemonDetails() {
   //Esto evitará que se produzca el error "id is not defined" en la primera renderización
   //antes de que los datos se carguen desde la API.
 
-  const handleFavoriteClick = (event) => {
-    event.preventDefault(); // Evitar que se active el enlace
-    if (isPokemonInFavorites(pokemon)) {
-      removeFavoritePokemon(pokemon);
+  const handleFavoriteClick = (event, id) => {
+    event.preventDefault(); // Evitar que se active el link
+
+    const pokemonData = {
+      key: pokemon.name,
+      name: pokemon.name,
+      id: pokemon.id,
+      url: pokemon.url,
+      imageUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${pokemon.id}.png`,
+    };
+
+    if (isPokemonInFavorites(pokemonData)) {
+      removeFavoritePokemon(pokemonData);
     } else {
-      addFavoritePokemon(pokemon);
+      addFavoritePokemon(pokemonData);
     }
   };
 
@@ -76,7 +74,7 @@ export default function PokemonDetails() {
               <section className="pokemondetails--info--image">
                 <img
                   src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${pokemon.id}.png`}
-                  alt={`Imagen de ${pokemon.name}`}
+                  alt={`${pokemon.name} image`}
                 />
               </section>
 
