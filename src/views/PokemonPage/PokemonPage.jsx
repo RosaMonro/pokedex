@@ -4,7 +4,6 @@ import "./PokemonPage.scss";
 
 export default function PokemonPage() {
   const { name } = useParams();
-  // console.log(name);
 
   return (
     <>

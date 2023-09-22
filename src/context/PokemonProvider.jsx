@@ -57,7 +57,6 @@ export const PokemonProvider = ({ children }) => {
   //GESTIÓN DE FAVORITOS
 
   const addFavoritePokemon = (pokemon) => {
-    // console.log(pokemon);
     if (!isPokemonInFavorites(pokemon)) {
       // verifica si el Pokémon que se intenta agregar no está ya en la lista de favoritos
       setFavoritePokemons([...favoritePokemons, pokemon]);
@@ -65,8 +64,12 @@ export const PokemonProvider = ({ children }) => {
   };
 
   const removeFavoritePokemon = (pokemon) => {
+    // La función recibe como argumento el Pokémon que se desea eliminar de favoritos.
     const updatedFavorites = favoritePokemons.filter(
       (favPokemon) => favPokemon.id !== pokemon.id //favPokemon representa cada elemento de favoritePokemons mientras se ejecuta la f(x) filter,
+      // Utiliza el método `.filter()` para crear una nueva lista de favoritos (`updatedFavorites`) que excluye el Pokémon que se desea eliminar.
+      // La condición `(favPokemon) => favPokemon.id !== pokemon.id` verifica si el `id` del `favPokemon` es diferente del `id` del `pokemon` que se quiere eliminar.
+      // Si el `id` es diferente, el `favPokemon` se incluye en la nueva lista `updatedFavorites`. Si es igual, se excluye.
     );
     setFavoritePokemons(updatedFavorites);
   };

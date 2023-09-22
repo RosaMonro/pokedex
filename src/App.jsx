@@ -9,6 +9,10 @@ import PokemonPage from "./views/PokemonPage/PokemonPage";
 import "./scss/global.scss";
 import { PokemonProvider } from "./context/PokemonProvider";
 
+const handleSubmit = (event) => {
+  event.preventDefault();
+};
+
 function App() {
   return (
     <>
@@ -24,7 +28,7 @@ function App() {
                   <Route path="/PokemonPage/:name" element={<PokemonPage />} />
                 </Routes>
               </div>
-              <form className="pokedex--input__mobile">
+              <form className="pokedex--input__mobile" onSubmit={handleSubmit}>
                 <Input />
               </form>
 
@@ -45,7 +49,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <form className="pokedex--input__desktop">
+            <form className="pokedex--input__desktop" onSubmit={handleSubmit}>
               <Input />
             </form>
             <div className="pokedex--footer">
