@@ -6,13 +6,21 @@ export default function BtnCross(props) {
   return (
     <>
       <div className="cross">
-        <div className="leftcross" onClick={onLeftClick} aria-label="left">
+        <div
+          className="leftcross"
+          onClick={onLeftClick}
+          aria-label="previous pokemon"
+        >
           <div className="leftT"></div>
         </div>
         <div className="topcross">
           <div className="upT"></div>
         </div>
-        <div className="rightcross" onClick={onRightClick} aria-label="right">
+        <div
+          className="rightcross"
+          onClick={onRightClick}
+          aria-label="next pokemon"
+        >
           <div className="rightT"></div>
         </div>
         <div className="midcross">
